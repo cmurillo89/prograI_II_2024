@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block titulo %}Películas{% endblock %}
+{% block contenido %}
+    <h1>Películas</h1>
+    <p>
+        Sección que enlista las películas en el sistema
+    </p>
+    <div class="card">
+        <div class="card-header"><a
+            href="#"
+            class="btn btn-success"
+        >Agregar Película</a></div>
+        <div class="card-body">
+            <h4 class="card-title">Películas</h4>
+            <div
+                class="table-responsive"
+            >
+                <table
+                    class="table table-primary"
+                >
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Título</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="">
+                            <td scope="row">1</td>
+                            <td>SpiderMan</td>
+                            <td>Es el hobre araña</td>
+                            <td>
+                                <a
+                                    href="#"
+                                    class="btn btn-warning"
+                                >Editar</a>
+                                <a
+                                    href="#"
+                                    class="btn btn-danger"
+                                >Eliminar</a>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        <div class="card-footer text-muted">Notas adicionales</div>
+    </div>
+    
+{% endblock %}
