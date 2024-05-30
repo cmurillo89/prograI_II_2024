@@ -19,21 +19,20 @@
     </head>
 
     <body>
-        <div class="container">
-            <nav class="navbar navbar-expand navbar-light bg-light">
-                <div class="nav navbar-nav">
-                    <a class="nav-item nav-link active" href="#" aria-current="page"
-                        >Inicio <span class="visually-hidden">(current)</span></a
-                    >
-                    <a class="nav-item nav-link" href="#">Peliculas</a>
-                    <a class="nav-item nav-link" href="#">Nosotros</a>
-                </div>
-            </nav>
-            
-
-            
-        </div>
-
+        <nav class="navbar navbar-expand navbar-light bg-light">
+            <div class="nav navbar-nav">
+                <a class="navbar-brand" href="#">
+                    <img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    Sistema de películas
+                  </a>
+                <a class="nav-item nav-link active" href="{% url 'inicio' %}" aria-current="page"
+                    >Inicio <span class="visually-hidden">(current)</span></a
+                >
+                <a class="nav-item nav-link" href="{% url 'index' %}">Peliculas</a>
+                <a class="nav-item nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+            </div>
+        </nav>
+        <br>
         <div class="container">
             {% block contenido %} {% endblock %}
         </div>

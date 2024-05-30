@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block titulo %}Editar película{% endblock %}
+
+{% block contenido %}
+    <h1>Editar película</h1>
+    <div class="card">
+        <div class="card-header">Editar una nueva película</div>
+        <div class="card-body">
+            <h4 class="card-title">Ingrese los datos a guardar</h4>
+            <p class="card-text">Luego de llenar el formulario presione el botón de guardar</p>
+            <br>
+            {% include 'peliculas/form.html' %}
+        </div>
+        <div class="card-footer text-muted">Datos adicionales</div>
+    </div>
+    
+{% endblock %}

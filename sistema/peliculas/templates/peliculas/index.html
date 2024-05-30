@@ -7,7 +7,7 @@
     </p>
     <div class="card">
         <div class="card-header"><a
-            href="#"
+            href="{% url 'crear' %}"
             class="btn btn-success"
         >Agregar Película</a></div>
         <div class="card-body">
@@ -21,6 +21,7 @@
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
+                            <th scope="col">Imagen</th>
                             <th scope="col">Título</th>
                             <th scope="col">Descripción</th>
                             <th scope="col">Acciones</th>
@@ -29,11 +30,12 @@
                     <tbody>
                         <tr class="">
                             <td scope="row">1</td>
+                            <td>Imagen</td>
                             <td>SpiderMan</td>
                             <td>Es el hobre araña</td>
                             <td>
                                 <a
-                                    href="#"
+                                    href="{% url 'editar' %}"
                                     class="btn btn-warning"
                                 >Editar</a>
                                 <a

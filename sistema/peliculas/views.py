@@ -9,3 +9,9 @@ def nosotros(request):
 
 def index(request):
     return render(request, 'peliculas/index.html')
+
+def crear(request):
+    return render(request, 'peliculas/crear.html')
+
+def editar(request):
+    return render(request, 'peliculas/editar.html')
