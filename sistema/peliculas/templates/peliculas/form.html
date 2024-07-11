@@ -1,14 +1,29 @@
 <form enctype="multipart/form-data" method="post">
+{% csrf_token %}
 
+{% for campo in formulario %}
     <div class="form-group">
-        <label for="titulo" class="form-label">Nombre</label>
 
-        <input type="text"
+       
+        <label for="titulo" class="form-label">{{campo.label}}</label>
+
+        
+        <input 
+        type="{{campo.field.widget.input_type}}"
+        type="{{campo.field.widget.input_type}}"
         class="form-control"
         id="" 
-        name="" 
-        value="">
+        name="{{campo.name}}" 
+        value="{{campo.value | default:''}}"
+        placeholder="{{campo.label}}">
     </div>
+    {% if campo.field.widget.input_type == 'file' %}
+    <img src="{{campo.value.url}}" class="img-thumbnail" style="width: 100px;">
+    {% endif %}
+    <div class="col-12 help-text">
+        {{campo.help_text}}
+    </div>
+{% endfor %}
     <br>
-    <button type="submit" class="btn btn-primary">Guardar</button>
+<input type="submit" id="" class="btn btn-success" value="Guardar">
 </form>
